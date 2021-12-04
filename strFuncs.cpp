@@ -2,6 +2,7 @@
 #include <string>
 #include <cstring>
 #include <algorithm>
+#include <cctype>
 #include "strFuncs.h"
 #include "linkedListFuncs.h"
 using namespace std;
@@ -41,6 +42,12 @@ bool isAnagram(string s1, string s2){
 
   int ind = s2.find(s);
 
+  for(int i = 0; i<len; i++)
+  {
+    s1.at(i) = tolower(s1[i]);
+    s2.at(i) = tolower(s2[i]);
+  }
+
 
 
   if(ind>=0 && ind<len)
@@ -67,14 +74,16 @@ bool isAnagram(string s1, string s2){
  * You should provide a recursive solution
  */
 bool isPalindrome(const string s1){
+
   int len = s1.size();
   if(len<2)
   {
     return true;
   }
+
   else
   {
-    if(s1.at(0)!=s1.at(len-1))
+    if(tolower(s1.at(0))!=tolower(s1.at(len-1)))
     {
       return false;
     }
