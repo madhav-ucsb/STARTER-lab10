@@ -1,5 +1,5 @@
 #include "tddFuncs.h"
-
+#include "strFuncs.h"
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -61,3 +61,5 @@ void assertTrue(bool expression,
 void startTestGroup(std::string name){
   cout << "--------------" << name << "--------------" << endl;
 }
+
+
