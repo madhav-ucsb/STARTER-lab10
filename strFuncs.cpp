@@ -41,9 +41,7 @@ bool isAnagram(string s1, string s2){
 
   int ind = s2.find(s);
 
-  cout<<"index "<<ind<<endl;
 
-  cout<<"len " << len<<endl; 
 
   if(ind>=0 && ind<len)
   {
@@ -51,8 +49,7 @@ bool isAnagram(string s1, string s2){
 
     
     s1 = s1.substr(1,len);
-    cout<<s1<<" size "<<s2.size() << endl;
-    cout<<s2<<" size "<<s2.size() << endl;
+
     return isAnagram(s1,s2);
   }
   else
@@ -70,8 +67,6 @@ bool isAnagram(string s1, string s2){
  * You should provide a recursive solution
  */
 bool isPalindrome(const string s1){
-
-  cout<<s1<<endl;
   int len = s1.size();
   if(len<2)
   {
